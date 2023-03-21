@@ -1,24 +1,94 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import DataDetails from "./DataDetails";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [location, setLocation] = useState("");
+  const [form, setForm] = useState({
+    date: "",
+    mood: "",
+    sleep: "",
+    activity: "",
+  });
+
+  useEffect(() => {
+    getData();
+  }, [location]);
+
+  async function getData() {
+    let API = "http://localhost:8080/data";
+
+    if (location !== "") {
+      API = API + "?location=" + location;
+    }
+    const res = await axios.get(API);
+    setData(res.data);
+  }
+
+  function handleLocation(event) {
+    setLocation(event.target.value);
+  }
+
+  function handleChange(event) {
+    setForm({ ...form, [event.target.date]: event.target.value });
+  }
+
+  async function handleAddData(event) {
+    event.preventDefault();
+    const API = "http://localhost:8080/data";
+    const res = await axios.post(API, form);
+
+    const newDataList = [...data, res.data];
+    setData(newDataList);
+
+    setForm({
+      date: "",
+      mood: "",
+      sleep: "",
+      activity: "",
+    });
+  }
+
+  async function deleteData(id, date) {
+    const confirmDelete = window.confirm(
+      `Are you sure you want remove your ${date} data?`
+    );
+    if (confirmDelete) {
+      const API = `http://localhost:8080/data/${id}`;
+      const res = await axios.delete(API);
+      console.log(res);
+      getData();
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <h1>Data</h1>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                handleLocation={handleLocation}
+                location={location}
+                data={data}
+                deleteData={deleteData}
+                handleAddData={handleAddData}
+                form={form}
+                handleChange={handleChange}
+              />
+            }
+          />
+          <Route path="/data/:id" element={<DataDetails />} />
+        </Routes>
+        <p>This is the footer</p>
+      </div>
+    </BrowserRouter>
   );
 }
 
