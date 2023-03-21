@@ -3,7 +3,7 @@ require("dotenv").config();
 
 const Data = require("./models/data");
 
-mongoose.connect(process.env.DATABAS_URL);
+mongoose.connect(process.env.DATABASE_URL);
 
 async function seed() {
   await Data.create({ date: "20/03/2023", mood: 4, sleep: 7, activity: 0 });
