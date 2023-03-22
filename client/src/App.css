@@ -2,6 +2,18 @@ body {
   margin: 0;
 }
 
+span {
+  width: 17px;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: crimson;
+  color: yellow;
+}
+
 .App {
   text-align: center;
   background-color: burlywood;
