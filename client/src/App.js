@@ -69,8 +69,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
       <div className="App">
+        <Header />
         <h1>Data</h1>
         <Routes>
           <Route

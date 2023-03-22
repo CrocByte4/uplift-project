@@ -1,0 +1,21 @@
+.Header {
+  display: grid;
+  grid-template-areas: "logo nav";
+  background-color: coral;
+}
+
+.Nav {
+  font-family: fantasy;
+
+  font-size: larger;
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+.Logo {
+  width: 100px;
+  margin-left: 50px;
+}
