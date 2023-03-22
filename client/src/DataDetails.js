@@ -46,9 +46,10 @@ export default function DataDetails() {
 
   return (
     <div>
-      <h2>{data.name}</h2>
-      <p>{data.location}</p>
-      <p>{data.color}</p>
+      <h2>{data.date}</h2>
+      <p>{data.mood}</p>
+      <p>{data.sleep}</p>
+      <p>{data.activity}</p>
       <h3>Update details of Data</h3>
       <form onSubmit={handleUpdateData}>
         <input

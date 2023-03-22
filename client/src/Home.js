@@ -1,6 +1,6 @@
 export default function Home({
-  handleLocation,
-  location,
+  handleDate,
+  date,
   data,
   deleteData,
   handleAddData,
@@ -10,9 +10,9 @@ export default function Home({
   return (
     <div>
       <input
-        onChange={handleLocation}
-        value={location}
-        placeholder="Filter by Location"
+        onChange={handleDate}
+        value={date}
+        placeholder="Find By Date (dd/mm/yyyy)"
       />
       {data.map((data, index) => {
         return (

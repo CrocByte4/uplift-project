@@ -9,7 +9,7 @@ import DataDetails from "./DataDetails";
 
 function App() {
   const [data, setData] = useState([]);
-  const [location, setLocation] = useState("");
+  const [date, setDate] = useState("");
   const [form, setForm] = useState({
     date: "",
     mood: "",
@@ -19,20 +19,20 @@ function App() {
 
   useEffect(() => {
     getData();
-  }, [location]);
+  }, [date]);
 
   async function getData() {
     let API = "http://localhost:8080/data";
 
-    if (location !== "") {
-      API = API + "?location=" + location;
+    if (date !== "") {
+      API = API + "?date=" + date;
     }
     const res = await axios.get(API);
     setData(res.data);
   }
 
-  function handleLocation(event) {
-    setLocation(event.target.value);
+  function handleDate(event) {
+    setDate(event.target.value);
   }
 
   function handleChange(event) {
@@ -77,8 +77,8 @@ function App() {
             path="/"
             element={
               <Home
-                handleLocation={handleLocation}
-                location={location}
+                handleDate={handleDate}
+                date={date}
                 data={data}
                 deleteData={deleteData}
                 handleAddData={handleAddData}
