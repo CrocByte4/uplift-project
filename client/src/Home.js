@@ -31,25 +31,25 @@ export default function Home({
           name="date"
           value={form.date}
           onChange={handleChange}
-          placeholder="Date"
+          placeholder="Date (dd/mm/yyyy)"
         />
         <input
           name="mood"
           value={form.mood}
           onChange={handleChange}
-          placeholder="Mood"
+          placeholder="Mood (1-10)"
         />
         <input
           name="sleep"
           value={form.sleep}
           onChange={handleChange}
-          placeholder="Sleep"
+          placeholder="Sleep (hours)"
         />
         <input
           name="activity"
           value={form.activity}
           onChange={handleChange}
-          placeholder="Activity"
+          placeholder="Activity (hours)"
         />
         <button type="submit">Add Data</button>
       </form>

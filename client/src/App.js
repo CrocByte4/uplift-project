@@ -34,7 +34,7 @@ function App() {
   }
 
   function handleChange(event) {
-    setForm({ ...form, [event.target.date]: event.target.value });
+    setForm({ ...form, [event.target.name]: event.target.value });
   }
 
   async function handleAddData(event) {
@@ -86,7 +86,7 @@ function App() {
           />
           <Route path="/data/:id" element={<DataDetails />} />
         </Routes>
-        <p>This is the footer</p>
+        <p>Uplift by Joseph "CrocByte" Price</p>
       </div>
     </BrowserRouter>
   );
