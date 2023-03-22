@@ -51,7 +51,7 @@ export default function Home({
           onChange={handleChange}
           placeholder="Activity (hours)"
         />
-        <button type="submit">Add Data</button>
+        <button type="submit">⬆️📁</button>
       </form>
     </div>
   );

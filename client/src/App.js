@@ -2,6 +2,8 @@ import "./App.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
 import Home from "./Home";
 import DataDetails from "./DataDetails";
 
@@ -67,6 +69,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <div className="App">
         <h1>Data</h1>
         <Routes>
@@ -86,8 +89,8 @@ function App() {
           />
           <Route path="/data/:id" element={<DataDetails />} />
         </Routes>
-        <p>Uplift by Joseph "CrocByte" Price</p>
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }
