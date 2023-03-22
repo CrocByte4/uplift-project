@@ -16,6 +16,7 @@
 }
 
 .Logo {
+  grid-area: logo;
   width: 100px;
   margin-left: 50px;
 }

@@ -89,8 +89,8 @@ function App() {
           />
           <Route path="/data/:id" element={<DataDetails />} />
         </Routes>
+        <Footer />
       </div>
-      <Footer />
     </BrowserRouter>
   );
 }

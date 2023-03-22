@@ -1,5 +1,9 @@
 import "./Footer.css";
 
 export default function Footer() {
-  return <h1>Uplift by Joseph "CrocByte" Price</h1>;
+  return (
+    <footer className="Footer">
+      <h1>Uplift by Joseph "CrocByte" Price</h1>;
+    </footer>
+  );
 }
