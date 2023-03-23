@@ -8,7 +8,8 @@ export default function Home({
   handleChange,
 }) {
   return (
-    <div>
+    <div class="display">
+      <h1>Your Tracker</h1>
       <input
         onChange={handleDate}
         value={date}
@@ -18,9 +19,9 @@ export default function Home({
         return (
           <div key={index}>
             <h3>{data.date}</h3>
-            <p>mood: {data.mood}</p>
-            <p>sleep: {data.sleep}</p>
-            <p>activity: {data.activity}</p>
+            <p>Mood: {data.mood}</p>
+            <p>Sleep: {data.sleep}</p>
+            <p>Activity: {data.activity}</p>
             <span onClick={() => deleteData(data._id, data.date)}>X</span>
           </div>
         );
@@ -51,7 +52,7 @@ export default function Home({
           onChange={handleChange}
           placeholder="Activity (hours)"
         />
-        <button type="submit">⬆️📁</button>
+        <button type="submit">Upload data ⬆️📁</button>
       </form>
     </div>
   );

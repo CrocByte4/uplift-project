@@ -2,6 +2,16 @@ body {
   margin: 0;
 }
 
+.display {
+  font-family: monospace;
+  margin-top: 200px;
+  font-weight: bolder;
+  border-style: solid;
+  margin: auto;
+  background-color: blanchedalmond;
+  width: 25vw;
+}
+
 span {
   width: 17px;
 
