@@ -7,7 +7,6 @@ export default function Footer() {
         Uplift by Joseph "<a href="https://github.com/CrocByte4">CrocByte4</a>"
         Price
       </h1>
-      ;
     </footer>
   );
 }

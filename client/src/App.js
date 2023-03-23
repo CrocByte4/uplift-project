@@ -69,9 +69,8 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Header />
       <div className="App">
-        <Header />
-
         <Routes>
           <Route
             path="/"
@@ -89,8 +88,8 @@ function App() {
           />
           <Route path="/data/:id" element={<DataDetails />} />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

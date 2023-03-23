@@ -1,4 +1,5 @@
 .Header {
+  height: 7vw;
   display: grid;
   grid-template-areas: "logo nav";
   background-color: #fcc929;
