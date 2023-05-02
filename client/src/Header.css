@@ -17,6 +17,9 @@
 .Nav a {
   font-family: monospace;
   font-size: larger;
+  font-weight: bolder;
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
   text-decoration-line: none;
   color: khaki;
 }
