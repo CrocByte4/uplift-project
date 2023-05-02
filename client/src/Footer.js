@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="Footer">
       <h1>
         Uplift by Joseph "
-        <a href="https://github.com/CrocByte4" target="_blank">
+        <a href="https://github.com/CrocByte4" target="_blank" rel="noreferrer">
           CrocByte4
         </a>
         " Price
