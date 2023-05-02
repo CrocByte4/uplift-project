@@ -8,7 +8,8 @@
 
 .Nav {
   font-family: fantasy;
-  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-color: khaki;
 
   font-size: larger;
   grid-area: nav;
