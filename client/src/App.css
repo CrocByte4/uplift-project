@@ -27,6 +27,7 @@ span {
 }
 
 .App {
+  height: 90vw;
   margin-bottom: 0;
   text-align: center;
   background-color: #fcc929;
