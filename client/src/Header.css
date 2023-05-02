@@ -7,16 +7,18 @@
 }
 
 .Nav {
-  font-family: fantasy;
-  text-decoration-line: none;
-  text-decoration-color: khaki;
-
-  font-size: larger;
   grid-area: nav;
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
   justify-items: center;
+}
+
+.Nav a {
+  font-family: monospace;
+  font-size: larger;
+  text-decoration-line: none;
+  text-decoration-color: khaki;
 }
 
 .Logo {
